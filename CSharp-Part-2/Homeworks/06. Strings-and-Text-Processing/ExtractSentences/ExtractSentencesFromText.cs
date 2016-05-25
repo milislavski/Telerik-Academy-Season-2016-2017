@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -8,25 +9,41 @@ namespace ExtractSentences
     {
         static void Main()
         {
-            string word = Console.ReadLine();
+            string inputWord = Console.ReadLine();
             string text = Console.ReadLine();
 
-            string[] allSentences = text.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
-            char[] wordSeparators = text.Where(ch => !char.IsLetter(ch)).Distinct().ToArray();
+            var separators = new List<char>();
 
-            foreach (var sentence in allSentences)
+            foreach (var symbol in text)
             {
-                var currentWords = sentence.Split(wordSeparators, StringSplitOptions.RemoveEmptyEntries);
-
-                for (int i = 0; i < currentWords.Length; i++)
+                if (symbol == '.' || char.IsDigit(symbol) || symbol == '\\')
                 {
-                    if (word.ToLower() == currentWords[i].ToLower())//.Trim();
+                    continue;
+                }
+                if (!char.IsLetter(symbol))
+                {
+                    separators.Add(symbol);
+                }
+            }
+            var wordSeparators = separators.Distinct().ToArray();
+            var sentences = text.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).ToArray();
+            var result = new StringBuilder();
+
+
+            foreach (var sentence in sentences)
+            {
+                var currentWords = sentence.Split(wordSeparators);
+                foreach (var word in currentWords)
+                {
+                    if (word == inputWord)
                     {
-                        Console.Write(sentence + '.' + ' ');
+                        result.Append(sentence);
+                        result.Append(". ");
                         break;
                     }
                 }
             }
+            Console.WriteLine(result.ToString());
         }
     }
 }
