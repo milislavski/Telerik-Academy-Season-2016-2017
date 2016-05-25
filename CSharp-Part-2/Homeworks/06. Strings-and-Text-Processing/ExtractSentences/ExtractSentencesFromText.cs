@@ -22,7 +22,7 @@ namespace ExtractSentences
                 {
                     if (word.ToLower() == currentWords[i].ToLower())//.Trim();
                     {
-                        Console.Write(sentence + '.');
+                        Console.Write(sentence + '.' + ' ');
                         break;
                     }
                 }
