@@ -1,0 +1,30 @@
+form {
+    border: 2px solid cornflowerblue;
+    width: 300px;
+    height: 367px;
+}
+#result {
+    height: 75px;
+    width: 298px;
+    border: 1px solid cornflowerblue;
+    text-align: right;
+    font-size: 40px;
+    color: cornflowerblue;
+    text-shadow: 2px 2px 3px blue;
+    background-color: lightblue;
+}
+.btn {
+    width: 75px;
+    height: 72px;
+    padding: 0px;
+    margin: 0px;
+    background-color: lightblue;
+    font-size: 40px;
+    color: cornflowerblue;
+    text-shadow: 2px 2px 3px blue;
+    border: 1px solid cornflowerblue;
+    float: left;
+}
+#zero {
+    width: 150px;
+}

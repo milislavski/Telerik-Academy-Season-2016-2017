@@ -1,0 +1,74 @@
+form{
+	width:420px;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+td {
+	border: 1px solid #A0A0A0;
+}
+
+tfoot {
+	background-color: lightblue;
+}
+
+#lastName {
+	width: 235px;
+}
+
+#firstName {
+	width: 235px;
+}
+
+#address {
+	width: 220px;
+}
+
+#city {
+	width: 155px;
+}
+
+#state {
+	width: 50px;
+}
+
+#postCode {
+	width: 60px;
+} 
+
+#country {
+	width: 153px;
+}
+
+#phone , #area {
+	width: 45px;
+}
+
+#number {
+	width: 100px;
+}
+
+#email {
+	width: 230px;
+}
+
+#birthDate {
+	width: 153px;
+}
+
+#comments {
+	width: 220px;
+}
+
+.firstColumn {
+	width: 150px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#footer {
+	text-align: center;
+}

@@ -1,0 +1,11 @@
+body {
+    background-color: #ADD8E6;
+}
+dt {
+    font-style: italic;
+}
+#picture {
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+}
