@@ -12,10 +12,11 @@ namespace SquareRoot
         {
             try
             {
-                int number = int.Parse(Console.ReadLine());
+                double number = double.Parse(Console.ReadLine());
                 if (number < 0)
                 {
-                    throw new Exception();
+                    Console.WriteLine("Invalid number");
+                    return;
                 }
                 Console.WriteLine("{0:0.000}", Math.Sqrt(number));
 
@@ -39,6 +40,8 @@ namespace SquareRoot
             {
                 Console.WriteLine("Good bye");
             }
+
+
         }
     }
 }
